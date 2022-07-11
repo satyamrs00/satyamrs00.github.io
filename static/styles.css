@@ -1,0 +1,93 @@
+body {
+    font-family: helvetica, sans-serif, arial;
+    margin: 0px;
+}
+@keyframes home1 {
+    0% {
+        color: rgba(0,0,0,0);
+    }
+    15% {
+        color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+@keyframes home2 {
+    0% {
+        padding-left: 0%;
+        opacity: 0%;
+    }
+    15% {
+        padding-left: 0%;
+        opacity: 0%;
+    }
+    100% {
+        padding-left: 5%;
+        opacity: 100%;
+    }
+}
+@keyframes home3 {
+    0% {
+        padding-top: 40px;
+        opacity: 0%;
+    }
+    15% {
+        padding-top: 40px;
+        opacity: 0%;
+    }
+    100% {
+        padding-top: 0px;
+        opacity: 100%;
+    }
+}
+#home {
+    position: relative;
+}
+@font-face {
+    font-family: helvetica-w01-bold;
+    src: url(/fonts/helvetica-w01-bold.ttf);
+}
+@font-face {
+    font-family: helvetica-w01-light;
+    src: url(/fonts/helvetica-w01-light.ttf);
+}
+#nameOnGif {
+    font-family: helvetica-w01-bold, sans-serif;
+    width: 50%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    color: white;
+}
+#actualName {
+    animation-name: home1;
+    font-size: 60px;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    padding-left: 5%;
+}
+#nameOnGif span {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#positions {
+    letter-spacing: 3px;
+    padding: 40px 0px 40px 0px;
+    font-size: 20px;
+    font-family: helvetica-w01-light;
+    animation-name: home2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#eplbtn {
+    letter-spacing: 2px;
+    font-family: helvetica-w01-light;
+    padding: 10px 45px 10px 45px;
+}
+#eplbtndiv {
+    animation-name: home3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    padding: 0% 0% 0% 5%;
+}
