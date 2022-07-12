@@ -158,11 +158,10 @@ body {
 #project14 {
     position: absolute;
     right: 17%;
-    top: 37%;
+    bottom: 41%;
     animation-name: project14;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-
 }
 #project14 ul {
     list-style-type: none;
