@@ -66,15 +66,13 @@ body {
     color: white;
 }
 #actualName {
-    animation-name: home1;
     font-size: 60px;
+    animation-name: home1;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     padding-left: 5%;
-}
-#nameOnGif span {
-    padding-right: 4px;
-    padding-left: 4px;
+    letter-spacing: 30px;
+    line-height: 75px;
 }
 #positions {
     letter-spacing: 3px;
@@ -232,6 +230,11 @@ body {
     outline: none;
     box-shadow: 0 0 10px #858585;
 }
+.contactc1 input:hover, #contact2 textarea:hover, .contactc1 button:hover {
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 10px #858585;
+}
 #contact2 textarea {
     height: 30ch;
     width: 50.6ch;
@@ -262,9 +265,18 @@ body {
 #contacts2 {
     padding-right: 40px;
 }
-#contact3 img {
-    height: 30px;
-}
 .cdark {
     color: #444346;
+}
+#contact3 i {
+    font-size: 36px;
+}
+#contact3 a:focus{
+    outline: none !important;
+}
+#contact3 a:focus i {
+    transform: scale(1, 0.5);
+}
+#contact3 a:hover i {
+    transform: scale(0.7, 0.7);
 }
