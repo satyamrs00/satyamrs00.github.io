@@ -90,7 +90,7 @@ body {
     font-family: helvetica-w01-light;
     padding: 10px 45px 10px 45px;
     color: #000;
-    text-decoration: none;
+    cursor: pointer;
 }
 #eplbtn:focus{
     border: 1px solid black !important;
@@ -189,23 +189,21 @@ body {
     display: inline;
 }
 
-#navbar a {
+#navbar li {
     padding: 10px 50px 10px 50px;
     float: right;
-    
     margin-left: 5px;
     margin-right: 5px;
     font-size: 12px;
-    text-decoration: none;
-    color: #000;
     border: 1px black;
     border-style: solid none none none;
 }
-#navbar a:hover {
+#navbar li:hover {
     border-width: 3px;
     padding-top: 8px;
+    cursor: pointer;
 }
-#navbar a:focus {
+#navbar li:focus {
     outline: none !important;
     border-width: 3px ;
     padding-top: 8px;

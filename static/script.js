@@ -13,4 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ELs_inViewport.forEach(EL => {
         Obs.observe(EL, obsOptions);
     });
-})
+
+    document.getElementById('eplbtn').onclick = () => document.getElementById('explore').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('navexplore').onclick = () => document.getElementById('explore').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('navcontact').onclick = () => document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+});
