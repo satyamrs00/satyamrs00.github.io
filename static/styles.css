@@ -273,7 +273,7 @@ body {
     outline: none !important;
 }
 #contact3 a:focus i {
-    transform: scale(1, 0.5);
+    transform: scale(0.7, 0.7);
 }
 #contact3 a:hover i {
     transform: scale(0.7, 0.7);
