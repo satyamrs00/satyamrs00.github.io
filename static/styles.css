@@ -98,16 +98,16 @@ body {
 }
 
 [data-inviewport="project13"] { 
-    transition: 1.5s;
-    bottom: -10%;
-    opacity: 0.8;
+    transition: 1s;
+    bottom: 0%;
+    opacity: 0;
   }
 [data-inviewport="project13"].is-inViewport { 
     bottom: 16%;
     opacity: 1;
 }  
 [data-inviewport="project14"] { 
-    transition: 2s;
+    transition: 1s;
     transition-delay: 1.5s;
     opacity: 0;
 }
@@ -115,11 +115,13 @@ body {
     opacity: 1;
 }
 [data-inviewport="project1img2"] { 
-    transition: 2s;
-    right: 0%;
+    transition: 1.5s;
+    left: 0%;
+    opacity: 0;
 }
 [data-inviewport="project1img2"].is-inViewport { 
-    right: 5%;
+    left: 60%;
+    opacity: 1;
 }
 #project11 {
     position: relative;
