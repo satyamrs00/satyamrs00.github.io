@@ -78,17 +78,26 @@ body {
 }
 #positions {
     letter-spacing: 3px;
-    padding: 40px 0px 40px 0px;
-    font-size: 20px;
+    padding: 60px 0px 60px 0px;
+    font-size: 17px;
     font-family: helvetica-w01-light;
     animation-name: home2;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 #eplbtn {
+    background-color: #EFEFEF;
+    border: 1px solid #EFEFEF;
     letter-spacing: 2px;
     font-family: helvetica-w01-light;
     padding: 10px 45px 10px 45px;
+    color: #000;
+    text-decoration: none;
+}
+#eplbtn:focus{
+    border: 1px solid black !important;
+    outline: none !important;
+    box-shadow: 0 0 10px #858585 !important;
 }
 #eplbtndiv {
     animation-name: home3;
@@ -181,21 +190,81 @@ body {
     padding: 0;
     display: inline;
 }
-#navbar li {
-    color: #000;
+
+#navbar a {
     padding: 10px 50px 10px 50px;
     float: right;
-    border: 1px black;
-    border-style: solid none none none;
+    
     margin-left: 5px;
     margin-right: 5px;
     font-size: 12px;
-}
-#navbar a {
     text-decoration: none;
-    
+    color: #000;
+    border: 1px black;
+    border-style: solid none none none;
 }
-#navbar li:hover {
+#navbar a:hover {
     border-width: 3px;
     padding-top: 8px;
+}
+#navbar a:focus {
+    outline: none !important;
+    border-width: 3px ;
+    padding-top: 8px;
+}
+#contact {
+    background-color: #444346;
+}
+#contact1 {
+    text-align: right;
+    padding: 50px;
+}
+.contactc1 input, #contact2 textarea, .contactc1 button {
+    padding: 5px;
+    background-color: #585755;
+    color: white;
+    border: 1px solid #585755;
+    height: 3ch;
+    width: 50ch;
+}
+.contactc1 input:focus, #contact2 textarea:focus, .contactc1 button:focus {
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 10px #858585;
+}
+#contact2 textarea {
+    height: 30ch;
+    width: 50.6ch;
+}
+.contactc1, #contact2 {
+    padding: 5px;
+}
+.contactc1 button {
+    padding: 5px;
+    height: 5ch;
+    width: 51.6ch;
+}
+#contact3 {
+    background-color: #D5D5D5;
+    height: 40px;
+    padding: 15px;
+}
+#contacts1 {
+    padding-left: 15px;
+    color: #444346;
+    letter-spacing: 20px;
+}
+#contacts2, #contacts3, #contacts4 {
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#contacts2 {
+    padding-right: 40px;
+}
+#contact3 img {
+    height: 30px;
+}
+.cdark {
+    color: #444346;
 }
