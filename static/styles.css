@@ -116,7 +116,7 @@ body {
 }
 [data-inviewport="project1img2"] { 
     transition: 2s;
-    right: -30%;
+    right: 0%;
 }
 [data-inviewport="project1img2"].is-inViewport { 
     right: 5%;
