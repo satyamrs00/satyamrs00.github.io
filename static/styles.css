@@ -213,7 +213,7 @@ body {
 }
 #contact1 {
     text-align: right;
-    padding: 50px;
+    padding: 50px 100px;
 }
 .contactc1 input, #contact2 textarea, .contactc1 button {
     padding: 5px;
