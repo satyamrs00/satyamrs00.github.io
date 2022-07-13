@@ -121,15 +121,6 @@ body {
 [data-inviewport="project14"].is-inViewport { 
     opacity: 1;
 }
-[data-inviewport="project1img2"] { 
-    transition: 1.5s;
-    left: 0%;
-    opacity: 0;
-}
-[data-inviewport="project1img2"].is-inViewport { 
-    left: 60%;
-    opacity: 1;
-}
 #project11 {
     position: relative;
     width: 100%;
@@ -153,11 +144,6 @@ body {
     padding: 15px;
     position: absolute;
     left: 5%;
-}
-#project1img2 {
-    width: 40%;
-    position: absolute;
-    bottom: 0%;
 }
 .projecth {
     background-color: #F3EDE9;
