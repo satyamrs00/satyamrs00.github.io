@@ -278,6 +278,7 @@ body {
 
 #about{
     padding: 50px;
+    padding-left: 10%;
     display: none;
     background-color: #F5F0EB;
 }
@@ -303,8 +304,9 @@ body {
 }
 #abouts3{
     position: absolute;
-    left: 50%;
     top: 20%;
+    margin-right: 15%;
+    right: 0%;
 }
 #abouts3 img {
     width: 400px;
@@ -324,7 +326,6 @@ body {
 }
 #abouts4 span {
     position: absolute;
-    left: 88%;
     top: 29.7%;
     color: #444346;
 }
@@ -347,9 +348,10 @@ body {
 #aboutd4 {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 15%;
 }
 #aboutd4 > span {
-    flex: 0 1 250px;
+    flex: 0 1 25%;
     overflow: hidden;
     text-align: center;
     vertical-align: center;
@@ -366,7 +368,6 @@ body {
     filter: brightness(20%);
 }
 #aboutd4 > span > span {
-    float: left;
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -376,4 +377,63 @@ body {
     color: white;
     font-size: 36px;
     font-family: helvetica-w01-bold;
+}
+#abouts6 {
+    font-size: 30px;
+    line-height: 60px;
+    vertical-align: top;
+}
+#aboutd2 ul {
+    list-style-type: "🐥";
+    font-size: 20px;
+    padding: 30px 120px;
+}
+#aboutd2 {
+    background-color: #D5D5D5;
+    margin-right: 15%;
+}
+[data-inviewport="aboutl1"] { 
+    transition: 1s;
+    opacity: 0;
+    transform: scale(0,1);
+}
+[data-inviewport="aboutl1"].is-inViewport { 
+    opacity: 1;
+    transform: scale(1,1);
+}
+[data-inviewport="abouts4.1"] { 
+    transition: 1s;
+    opacity: 0;
+    left: 100%;
+}
+[data-inviewport="abouts4.1"].is-inViewport { 
+    opacity: 1;
+    left: 88%;
+}
+#aboutd5 {
+    display: inline;
+    font-size: 26px;
+    display: flex;
+}
+#aboutd5 > span {
+    margin: 30px 0px;
+    flex: 0 1 50%;
+}
+#aboutd5 ul {
+    list-style-type: none;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+@keyframes about1 {
+    0% {
+        opacity: 0;
+    } 50% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}
+#aboutd5l1, #aboutd5l2 {
+    animation: about1 2s ease-in-out 0s infinite forwards;
 }

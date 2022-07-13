@@ -21,6 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('navabout').onclick = () => {
         document.getElementById('about').style.display = "block";
         document.getElementById('about').scrollIntoView({behavior: 'smooth'});
+
+        var aboutd5l1 = ["Story Teller", "Explorer", "Collaborator"];
+        var i = 0;
+        setInterval(function() {
+            document.getElementById('aboutd5l1').innerHTML = aboutd5l1[i++];
+            if (i == aboutd5l1.length) i = 0; 
+        }, 2000);
+        var aboutd5l2 = ["Music", "Meowww", "History", "Movies", "Travelling"];
+        var j = 0;
+        setInterval(function() {
+            document.getElementById('aboutd5l2').innerHTML = aboutd5l2[j++];
+            if (j == aboutd5l2.length) j = 0; 
+        }, 2000);
     }
     document.getElementById('abouts1').onclick = () => {
         document.getElementById('about').style.display = "none";
@@ -37,5 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
             span.children.item(1).innerHTML = "";
         });
     })
-    
 });
