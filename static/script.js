@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('about').style.display = "block";
         document.getElementById('about').scrollIntoView({behavior: 'smooth'});
 
+        document.getElementById('aboutd5l1').style.animation = "about1 2s ease-in-out 0s infinite forwards";
+        document.getElementById('aboutd5l2').style.animation = "about1 2s ease-in-out 0s infinite forwards";
         var aboutd5l1 = ["Story Teller", "Explorer", "Collaborator"];
         var i = 0;
         setInterval(function() {
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (j == aboutd5l2.length) j = 0; 
         }, 2000);
     }
+
     document.getElementById('abouts1').onclick = () => {
         document.getElementById('about').style.display = "none";
     }
