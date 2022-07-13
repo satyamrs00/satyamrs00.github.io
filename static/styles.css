@@ -272,9 +272,108 @@ body {
 #contact3 a:focus{
     outline: none !important;
 }
-#contact3 a:focus i {
-    transform: scale(0.7, 0.7);
+#contact3 a:focus i, #contact3 a:hover i {
+    transform: scale(0.8, 0.8);
 }
-#contact3 a:hover i {
-    transform: scale(0.7, 0.7);
+
+#about{
+    padding: 50px;
+    display: none;
+    background-color: #F5F0EB;
+}
+#aboutd1 {
+    display: block;
+    position: relative;
+    min-height: 700px;
+}
+#abouts1 > i {
+    float: right;
+    font-size: 36px;
+    padding: 10px;
+}
+#abouts1 > i:hover, #abouts1 > i:focus {
+    transform: scale(0.8,0.8);
+}
+#abouts2{
+    color: #858585;
+    font-size: 80px;
+    position: absolute;
+    left: 10%;
+    font-family: helvetica-w01-bold;
+}
+#abouts3{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+}
+#abouts3 img {
+    width: 400px;
+}
+#abouts5 {
+    position: absolute;
+    bottom: 10%;
+    color: #444346;
+}
+#abouts4 {
+    display: inline-block;
+}
+#abouts4 i {
+    position: absolute;
+    left: 84%;
+    top: 30%;
+}
+#abouts4 span {
+    position: absolute;
+    left: 88%;
+    top: 29.7%;
+    color: #444346;
+}
+[data-inviewport="abouts5"] { 
+    transition: 1s;
+    opacity: 0;
+    right: 65%;
+}
+[data-inviewport="abouts5"].is-inViewport { 
+    opacity: 1;
+    right: 52%;
+}
+[data-inviewport="abouts4"] > i { 
+    transition: 1.5s;
+    transform: scale(0.5,0.5);
+}
+[data-inviewport="abouts4"].is-inViewport > i { 
+    transform: scale(4,0.5);
+}
+#aboutd4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+#aboutd4 > span {
+    flex: 0 1 250px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+}
+#aboutd4 img {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    position: relative;
+}
+#aboutd4 span:hover img {
+    transform: scale(1.1,1.1);
+    filter: brightness(20%);
+}
+#aboutd4 > span > span {
+    float: left;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0%;
+    bottom: 43%;
+    color: white;
+    font-size: 36px;
+    font-family: helvetica-w01-bold;
 }
