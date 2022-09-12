@@ -13,43 +13,42 @@
         <title>Satyam Sagar</title>
     </head>
     <body>
-        <div id="home">
-            
-            <!-- navigation bar -->
-            <div class="container-fluid fixed-top">
-                <nav class="navbar navbar-expand-md">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            <a class="nav-link" href="#">Features</a>
-                            <a class="nav-link" href="#">Pricing</a>
-                            <a class="nav-link disabled">Disabled</a>
-                            </div>
-                        </div>
+        <nav class="navbar navbar-expand-sm px-2 px-sm-5">
+            <div class="container-fluid">
+                <span id="top-name"><a href="#">SATYAM SAGAR</a></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-end">
+                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#">Works</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </div>
-                </nav>
+                </div>
             </div>
-            
-            <div style="height: 100vh;">
-                <img id="homebg" src="/static/images/homebg.jfif" alt="">
-                <div id="name" class="">
-                    <div id="actualname" class="">
-                        SATYAM<br>SAGAR
-                    </div>
-                    <div class="pt-5" id="roles">
-                        <span>Web Developer</span><br>
-                        <span>Software Engineer</span>
-                    </div>
-                    <div class="pt-5">
-                        <button id="explore" class="px-4 py-1">Explore</button>
+        </nav>
+
+        <div id="home">
+            <div class="w-100 h-100" id="home2">
+                <div class="d-flex align-items-center h-100">
+                    <div id="home-text">
+                        <div id="mid-name">
+                            SATYAM<br>SAGAR
+                        </div> 
+                        <div class="fs-4">
+                            <br><br>Web Developer<br>Software Engineer
+                        </div>
+                        <div>
+                            <br><br><a href="#works"><button id="explore" class="button">Explore</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        
     </body>
 </html>

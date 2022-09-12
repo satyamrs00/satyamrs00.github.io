@@ -8,41 +8,85 @@
 }
 body {
     font-family: helveticalight;
+    color: #F3EDE9!important;
 }
-#homebg {
-    height: 100%;
-    min-width: 100%;
-    background-color: #000;
-    filter: brightness(60%);
-    z-index: -1;
+a {
+    text-decoration: none;
+    color: #F3EDE9!important;
+}
+a:hover {
+    text-decoration: none;
+    color: #F3EDE9!important;
+}
+#home {
+    background-image: url(/static/images/homebg.jfif);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /* filter: brightness(50%); */
     position: relative;
 }
-.navbar-brand {
-    color: #F3EDE9!important;
+#home2 {
+    backdrop-filter: brightness(50%);
+    padding: 0px 20%;
+}
+
+.navbar {
+    background-color: transparent!important;
+    border: none!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* padding: 1% 10%; */
+}
+.navbar-nav{
+    flex-grow: 1!important;
 }
 .nav-link {
-    color: #F3EDE9!important;
-}
-#name {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    height: 100%;
     color: #F3EDE9;
-    padding: 11%;
+    border: 3px solid #F3EDE9;
+    border-width: 0px;
+    padding-right: 5%!important;
+    padding-left: 5%!important;
 }
-#actualname {
+i {
+    color: #F3EDE9;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #F3EDE9;
+    text-decoration: none;
+    border-width: 0px 0px 3px 0px;
+}
+
+#top-name {
     font-family: helveticabold;
-    letter-spacing: 1.5rem;
-    font-size: 4.5rem;
-    line-height: 5.2rem;
+    font-size: 1.2rem;
+    color: #F3EDE9;
+    z-index: 1;
 }
-#roles{
-    font-size: 1.3rem;
-    letter-spacing: .2rem;
-    line-height: 2rem;
+#home-text{
+    filter: brightness(200%);
 }
-#explore{
+#mid-name{
+    font-family: helveticabold;
+    font-size: 4rem;
+    z-index: 1;
+    letter-spacing: 1rem;
+    line-height: 4rem;
+}
+
+.button {
+    color: #F3EDE9;
+    background-color: transparent;
+    border: 3px solid #F3EDE9;
+    padding: 1% 10%;
+}
+.button:hover , .button:focus {
+    color: #000;
     background-color: #F3EDE9;
-    border: none;
+    font-weight: bolder;
 }
