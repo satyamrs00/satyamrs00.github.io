@@ -47,10 +47,10 @@ a:hover {
 }
 .nav-link {
     color: #F3EDE9;
-    border: 3px solid #F3EDE9;
-    border-width: 0px;
+    border: 3px solid transparent;
     padding-right: 5%!important;
     padding-left: 5%!important;
+    border-width: 0px 0px 3px 0px;
 }
 i {
     color: #F3EDE9;
@@ -60,6 +60,7 @@ i {
     color: #F3EDE9;
     text-decoration: none;
     border-width: 0px 0px 3px 0px;
+    border-color: #F3EDE9;
 }
 
 #top-name {
@@ -118,7 +119,7 @@ i {
 
 #works {
     height: auto;
-    background-image: linear-gradient(to bottom, #616366, #2E2E31);
+    background-image: linear-gradient(to bottom, #616366, #1D1D1D);
     color: #F3EDE9;
 }
 #libraryapi {
@@ -128,14 +129,20 @@ i {
     overflow-y: visible;
 }
 #libraryimg {
-    border : 2px solid #3B3B3B;
+    border : 0px solid #F3EDE9;
     border-radius: .7rem;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
-    border-width: 2px 0px 2px 2px;
-    box-shadow: 0px 5px 25px #f3ede966, -5px -5px 25px #F3EDE966, 0px 5px 25px #F3EDE966;
+    border-width: 1px 0px 1px 1px;
+    box-shadow: 0px 5px 25px #f3ede933, -5px -5px 25px #F3EDE933, 0px 5px 25px #F3EDE933;
 }
 
 .ls-n {
     letter-spacing: normal;
+}
+
+
+
+#contact {
+    background-color: #1D1D1D;
 }
