@@ -118,6 +118,8 @@ i {
 
 #works {
     height: auto;
+    background-image: linear-gradient(to bottom, #616366, #2E2E31);
+    color: #F3EDE9;
 }
 #libraryapi {
     background-image: linear-gradient(to right bottom, #365163,#635536);
@@ -132,4 +134,8 @@ i {
     border-top-right-radius: 0px;
     border-width: 2px 0px 2px 2px;
     box-shadow: 0px 5px 25px #f3ede966, -5px -5px 25px #F3EDE966, 0px 5px 25px #F3EDE966;
+}
+
+.ls-n {
+    letter-spacing: normal;
 }
