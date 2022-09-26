@@ -19,7 +19,7 @@ a:hover {
     color: #F3EDE9!important;
 }
 #home {
-    background-image: url(/static/images/homebg.jfif);
+    /* background-image: url(/static/images/homebg.jfif); */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -30,6 +30,10 @@ a:hover {
 #home2 {
     backdrop-filter: brightness(50%);
     padding: 0px 20%;
+}
+#c {
+    z-index: -999;
+    position: absolute;
 }
 
 .navbar {
@@ -64,7 +68,7 @@ i {
     bottom: 0;
     width: 0%;
     height: 3px;
-    background-image: linear-gradient(to bottom, #CF1E88, #59124E);
+    background-image: linear-gradient(to right, #DE42E5, #CD32C4);
     transition: all 0.3s ease;
 }
 .nav-link:hover::after, .nav-link:focus::after {
