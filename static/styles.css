@@ -20,6 +20,10 @@ a:hover {
 }
 ul{
     list-style-type: none;
+    padding: 0%;
+}
+input:focus-visible , textarea:focus-visible {
+    outline: none;
 }
 #home {
     /* background-image: url(/static/images/homebg.jfif); */
@@ -162,7 +166,7 @@ i {
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     /* border-width: 1px 0px 1px 1px; */
-    box-shadow: 0px 5px 25px #f3ede933, -5px -5px 25px #F3EDE933, 0px 5px 25px #F3EDE933;
+    box-shadow: 0px 5px 25px #f3ede9AA, -5px -5px 25px #F3EDE9AA, 0px 5px 25px #F3EDE9AA;
 }
 
 .ls-n {
@@ -181,16 +185,12 @@ i {
 }
 
 #networkimg1 {
-    border-radius: .5rem;
-    box-shadow: 0px 10px 25px #f3ede970;
+    border-radius: .3rem;
+    box-shadow: 0px 10px 25px #f3ede9AA;
 }
 
 #network {
     background-image: linear-gradient(to right bottom, #6E8464,#2B5135);
-}
-
-#fuzzzyurls {
-    min-height: 100vh;
 }
 
 #about {
@@ -204,8 +204,24 @@ i {
 
 .pizzaimgs {
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.pizzaimgs::-webkit-scrollbar {
+    display: none;
 }
 .pizzaimg {
     width: 360px;
     border-radius: 0.3rem;
+}
+
+.pgimg {
+    border-radius: .3rem;
+}
+
+#pgimg1 {
+    box-shadow: -10px 10px 25px #F3EDE9AA;
+}
+#pgimg2 {
+    box-shadow: 10px 10px 25px #F3EDE9AA;
 }
