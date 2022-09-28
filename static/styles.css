@@ -172,7 +172,7 @@ i {
 
 
 #contact {
-    background-color: #1D1D1D;
+    background-color: #000;
 }
 
 #pizza {
@@ -180,7 +180,32 @@ i {
     overflow-y: visible;
 }
 
-#pizzaimg1 {
+#networkimg1 {
     border-radius: .5rem;
     box-shadow: 0px 10px 25px #f3ede970;
+}
+
+#network {
+    background-image: linear-gradient(to right bottom, #6E8464,#2B5135);
+}
+
+#fuzzzyurls {
+    min-height: 100vh;
+}
+
+#about {
+    background-image: linear-gradient(to left bottom, #434B66,#000);
+    min-height: 100vh;
+}
+
+.toolicon {
+    width: 60px;
+}
+
+.pizzaimgs {
+    overflow-x: scroll;
+}
+.pizzaimg {
+    width: 360px;
+    border-radius: 0.3rem;
 }
