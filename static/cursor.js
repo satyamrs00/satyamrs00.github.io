@@ -16,7 +16,7 @@ const App = {
 		const onMouseMove = (ev) => {
 			const { clientX, clientY } = ev
 
-			const CIRCULAR_POINTER_SIZE = 30
+			const CIRCULAR_POINTER_SIZE = 100
 
 			let newCursorX = undefined
 			let newCursorY = undefined
@@ -47,13 +47,14 @@ const App = {
 
 				newCursorBorderRadius = window.getComputedStyle(this.currentlyHoveredLinkEl).borderRadius || 0
 
-                newCursorBackground = "#CD32C4"
+                newCursorBackground = "#3F4776"
+                // #2A2342 white background me kam aayega
 
                 
 			} else {
 
-				newCursorX = clientX
-				newCursorY = clientY
+				newCursorX = clientX - 40
+				newCursorY = clientY - 35
 
 				newCursorWidth = CIRCULAR_POINTER_SIZE
 				newCursorHeight = CIRCULAR_POINTER_SIZE
@@ -62,7 +63,7 @@ const App = {
 
                 newCursorOpacity = 1
 
-                newCursorBackground = "radial-gradient(circle closest-side, #CD32C4, transparent)"
+                newCursorBackground = "radial-gradient(circle closest-side, #3F4776, transparent)"
 			}
 
 			if (newCursorWidth + "px" !== this.cursorEl.style.width) {
