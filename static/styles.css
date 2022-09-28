@@ -180,7 +180,7 @@ i {
 }
 #libraryimg {
     /* border : 1px solid #F3EDE9; */
-    border-radius: .7rem;
+    border-radius: .3rem;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     /* border-width: 1px 0px 1px 1px; */
@@ -229,7 +229,7 @@ i {
     display: none;
 }
 .pizzaimg {
-    width: 360px;
+    /* width: 360px; */
     border-radius: 0.3rem;
 }
 
@@ -253,7 +253,7 @@ i {
     position: fixed;
     width: 30px;
     height: 30px;
-    background: radial-gradient(circle closest-side, #CD32C4, transparent);
+    background: radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, transparent);
     border-radius: 50%;
     top: -15px;
     left: -15px;
@@ -261,7 +261,7 @@ i {
     mix-blend-mode: screen;
     pointer-events: none;
     /* box-shadow: 5px 5px 20px #CD32C4, -5px -5px 20px #CD32C4, -5px 5px 20px #CD32C4, 5px -5px 20px #CD32C4, 0px 5px 20px #CD32C4, 0px -5px 20px #CD32C4, 5px 0px 20px #CD32C4, -5px 0px 20px #CD32C4, 5px 0px 20px #CD32C4; */
-    transition: 2s;
+    transition: width 2s ease, height 2s ease;
     transform: translate(0px, 0px); 
 }
 .cursorhide:-webkit-any-link, .cursorhide:-webkit-any-link:hover, .cursorhide:-webkit-any-link:focus, .cursorhover:-webkit-any-link, .cursorhover:-webkit-any-link:hover, .cursorhover:-webkit-any-link:focus {

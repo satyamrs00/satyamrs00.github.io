@@ -53,17 +53,17 @@ const App = {
                 
 			} else {
 
-				newCursorX = clientX - 40
+				newCursorX = clientX - 35
 				newCursorY = clientY - 35
 
 				newCursorWidth = CIRCULAR_POINTER_SIZE
 				newCursorHeight = CIRCULAR_POINTER_SIZE
 
-				newCursorBorderRadius = "0%"
+				newCursorBorderRadius = "50%"
 
                 newCursorOpacity = 1
 
-                newCursorBackground = "radial-gradient(circle closest-side, #3F4776, transparent)"
+                newCursorBackground = "radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent)"
 			}
 
 			if (newCursorWidth + "px" !== this.cursorEl.style.width) {
