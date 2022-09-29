@@ -35,6 +35,7 @@ label, button, button:hover, button:not(:disabled), [type=submit]:not(:disabled)
     cursor: none;
 }
 input:-internal-autofill-selected {
+    background: none!important;
     background-color: transparent !important;
     background-image: none !important;
     color: #F3EDE9 !important;
@@ -64,11 +65,12 @@ input:-internal-autofill-selected {
 .navbar {
     background-color: transparent!important;
     border: none!important;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+    backdrop-filter: blur(20px);
     /* padding: 1% 10%; */
 }
 .navbar-nav{
@@ -86,7 +88,7 @@ input:-internal-autofill-selected {
 i {
     color: #F3EDE9;
 }
-.nav-link::after{
+.nav-link::after, #top-name::after {
     content: "";
     position: absolute;
     left: 0;
@@ -96,7 +98,7 @@ i {
     background-image: linear-gradient(to right, #DE42E5, #CD32C4);
     transition: all 0.3s ease;
 }
-.nav-link:hover::after, .nav-link:focus::after {
+.nav-link:hover::after, #top-name:hover::after, #top-name:focus::after  , .nav-link:focus::after {
     transform: scaleX(1);
     width: 100%;
 }
@@ -106,6 +108,9 @@ i {
     font-size: 1.2rem;
     color: #F3EDE9;
     z-index: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
 }
 #home-text{
     filter: brightness(200%);

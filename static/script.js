@@ -1,5 +1,3 @@
-
-
 document.addEventListener( 'DOMContentLoaded', function(){
     var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
