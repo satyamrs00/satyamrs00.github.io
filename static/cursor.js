@@ -39,8 +39,8 @@ const App = {
                     newCursorOpacity = 1
                 }
 
-				newCursorX = currentlyHoveredLinkBoundings.x + 15
-				newCursorY = currentlyHoveredLinkBoundings.y + 15
+				newCursorX = currentlyHoveredLinkBoundings.x
+				newCursorY = currentlyHoveredLinkBoundings.y 
 
 				newCursorWidth = currentlyHoveredLinkBoundings.width
 				newCursorHeight = currentlyHoveredLinkBoundings.height
@@ -53,8 +53,8 @@ const App = {
                 
 			} else {
 
-				newCursorX = clientX - 35
-				newCursorY = clientY - 35
+				newCursorX = clientX - CIRCULAR_POINTER_SIZE / 2
+				newCursorY = clientY - CIRCULAR_POINTER_SIZE / 2
 
 				newCursorWidth = CIRCULAR_POINTER_SIZE
 				newCursorHeight = CIRCULAR_POINTER_SIZE
@@ -67,7 +67,7 @@ const App = {
 			}
 
 			if (newCursorWidth + "px" !== this.cursorEl.style.width) {
-				this.cursorEl.style.transition = "0.110s all"
+				this.cursorEl.style.transition = "0.1s all"
 
 				clearTimeout(this.lastClearTransitionTimeout)
 				this.lastClearTransitionTimeout = undefined
@@ -77,7 +77,7 @@ const App = {
 						this.cursorEl.style.transition = "none"
 
 						this.lastClearTransitionTimeout = undefined
-					}, 110)
+					}, 100)
 				}
 			}
 

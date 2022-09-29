@@ -1,5 +1,0 @@
-hide others when about is open
-add mobile responsiveness
-add project 2
-add history support
-fix the position of name in about

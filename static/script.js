@@ -1,128 +1,65 @@
-document.addEventListener( 'DOMContentLoaded', function(){
-    var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
-    ctx = c.getContext( '2d' ),
-    
-    opts = {
-      
-      len: 20,
-      count: 50,
-      baseTime: 10,
-      addedTime: 10,
-      dieChance: .05,
-      spawnChance: 1,
-      sparkChance: .1,
-      sparkDist: 10,
-      sparkSize: 2,
-      
-      color: 'hsl(hue,100%,light%)',
-      baseLight: 50,
-      addedLight: 10, // [50-10,50+10]
-      shadowToTimePropMult: 6,
-      baseLightInputMultiplier: .01,
-      addedLightInputMultiplier: .02,
-      
-      cx: w / 2,
-      cy: h / 2,
-      repaintAlpha: .04,
-      hueChange: .1
-    },
-    
-    tick = 0,
-    lines = [],
-    dieX = w / 2 / opts.len,
-    dieY = h / 2 / opts.len,
-    
-    baseRad = Math.PI * 2 / 6;
-    
-    ctx.fillStyle = 'black';
-    ctx.fillRect( 0, 0, w, h );
+const background = "#000"
+const mainText = "#F3EDE9";
+const headText = "#FFFFFF";
+const pinkGradient = "linear-gradient(to right, #DE42E5, #CD32C4)";
+const pinkColor = "#CD32C4";
+const blueCursorColor = "#3F4776";
+const cursorGradient = "radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent)";
+const imageShadowColor = "#F3EDE9AA";
+const blueYellowGradient = "linear-gradient(to right bottom, #365163, #635536)";
+const greenGradient = "linear-gradient(to right bottom, #6E8464, #2B5135)";
+const blueBlackGradient = "linear-gradient(to left bottom, #434B66, #000)";
 
-    function loop() {
-    
-    window.requestAnimationFrame( loop );
-    
-    ++tick;
-    
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.shadowBlur = 0;
-    ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', opts.repaintAlpha );
-    ctx.fillRect( 0, 0, w, h );
-    ctx.globalCompositeOperation = 'lighter';
-    
-    if( lines.length < opts.count && Math.random() < opts.spawnChance )
-        lines.push( new Line );
-    
-    lines.map( function( line ){ line.step(); } );
-    }
-    function Line(){
-    
-    this.reset();
-    }
-    Line.prototype.reset = function(){
-    
-    this.x = 0;
-    this.y = 0;
-    this.addedX = 0;
-    this.addedY = 0;
-    
-    this.rad = 0;
-    
-    this.lightInputMultiplier = opts.baseLightInputMultiplier + opts.addedLightInputMultiplier * Math.random();
-    
-    this.color = opts.color.replace( 'hue', tick * opts.hueChange );
-    this.cumulativeTime = 0;
-    
-    this.beginPhase();
-    }
-    Line.prototype.beginPhase = function(){
-    
-    this.x += this.addedX;
-    this.y += this.addedY;
-    
-    this.time = 0;
-    this.targetTime = ( opts.baseTime + opts.addedTime * Math.random() ) |0;
-    
-    this.rad += baseRad * ( Math.random() < .5 ? 1 : -1 );
-    this.addedX = Math.cos( this.rad );
-    this.addedY = Math.sin( this.rad );
-    
-    if( Math.random() < opts.dieChance || this.x > dieX || this.x < -dieX || this.y > dieY || this.y < -dieY )
-        this.reset();
-    }
-    Line.prototype.step = function(){
-    
-    ++this.time;
-    ++this.cumulativeTime;
-    
-    if( this.time >= this.targetTime )
-        this.beginPhase();
-    
-    var prop = this.time / this.targetTime,
-        wave = Math.sin( prop * Math.PI / 2  ),
-        x = this.addedX * wave,
-        y = this.addedY * wave;
-    
-    ctx.shadowBlur = prop * opts.shadowToTimePropMult;
-    ctx.fillStyle = ctx.shadowColor = this.color.replace( 'light', opts.baseLight + opts.addedLight * Math.sin( this.cumulativeTime * this.lightInputMultiplier ) );
-    ctx.fillRect( opts.cx + ( this.x + x ) * opts.len, opts.cy + ( this.y + y ) * opts.len, 2, 2 );
-    
-    if( Math.random() < opts.sparkChance )
-        ctx.fillRect( opts.cx + ( this.x + x ) * opts.len + Math.random() * opts.sparkDist * ( Math.random() < .5 ? 1 : -1 ) - opts.sparkSize / 2, opts.cy + ( this.y + y ) * opts.len + Math.random() * opts.sparkDist * ( Math.random() < .5 ? 1 : -1 ) - opts.sparkSize / 2, opts.sparkSize, opts.sparkSize )
-    }
-    loop();
+const backgroundL = "#fff";
+const mainTextL = "#414247";
+const headTextL = "#000";
+const pinkGradientL = "linear-gradient(to right, #DE42E5, #CD32C4)";
+const pinkColorL = "#CD32C4";
+const blueCursorColorL = "#2A2342";
+const cursorGradientL = "radial-gradient(circle closest-side, #CD32C4, #2A2342, #2A2342, #2A2342, transparent)";
+const imageShadowColorL = "#000000AA";
+const blueYellowGradientL = "linear-gradient(to right bottom, #a3bccd, #cdc0a3)";
+const greenGradientL = "linear-gradient(to right bottom, #c5cfc0, #9ac9a7)";
+const blueBlackGradientL = "linear-gradient(to left bottom, #adb3c9, #fff)";
 
-    window.addEventListener('resize', function(){
-    
-    w = c.width = window.innerWidth;
-    h = c.height = window.innerHeight;
-    ctx.fillStyle = 'black';
-    ctx.fillRect( 0, 0, w, h );
-    
-    opts.cx = w / 2;
-    opts.cy = h / 2;
-    
-    dieX = w / 2 / opts.len;
-    dieY = h / 2 / opts.len;
-    });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('light-mode');
+    console.log(el);
+    el.onclick = () => {
+        console.log(el);
+        // document.body.classList.toggle('light-mode');
+        let r = document.querySelector(':root');
+        console.log(getComputedStyle(r).getPropertyValue('--main-text'), mainText);
+
+        if (getComputedStyle(r).getPropertyValue('--main-text') == mainText) {
+            r.style.setProperty('--background', backgroundL);
+            r.style.setProperty('--main-text', mainTextL);
+            r.style.setProperty('--head-text', headTextL);
+            r.style.setProperty('--pink-gradient', pinkGradientL);
+            r.style.setProperty('--pink-color', pinkColorL);
+            r.style.setProperty('--blue-cursor-color', blueCursorColorL);
+            r.style.setProperty('--cursor-gradient', cursorGradientL);
+            r.style.setProperty('--image-shadow-color', imageShadowColorL);
+            r.style.setProperty('--blue-yellow-gradient', blueYellowGradientL);
+            r.style.setProperty('--green-gradient', greenGradientL);
+            r.style.setProperty('--blue-black-gradient', blueBlackGradientL);
+
+            document.getElementById('cursor').style.mixBlendMode = "exclusion";
+        } else {
+            r.style.setProperty('--background', background);
+            r.style.setProperty('--main-text', mainText);
+            r.style.setProperty('--head-text', headText);
+            r.style.setProperty('--pink-gradient', pinkGradient);
+            r.style.setProperty('--pink-color', pinkColor);
+            r.style.setProperty('--blue-cursor-color', blueCursorColor);
+            r.style.setProperty('--cursor-gradient', cursorGradient);
+            r.style.setProperty('--image-shadow-color', imageShadowColor);
+            r.style.setProperty('--blue-yellow-gradient', blueYellowGradient);
+            r.style.setProperty('--green-gradient', greenGradient);
+            r.style.setProperty('--blue-black-gradient', blueBlackGradient);
+
+            document.getElementById('cursor').style.mixBlendMode = "screen";
+        }
+    }
 });
