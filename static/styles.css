@@ -10,14 +10,14 @@
     --background:#000;
     --main-text:#F3EDE9;
     --head-text:#FFFFFF;
-    --pink-gradient:linear-gradient(to right, #DE42E5, #CD32C4);
+    --pink-gradient:linear-gradient(to right, #CD32C4, #9f94c6);
     --pink-color:#CD32C4;
-    --blue-cursor-color:#3F4776;
-    --cursor-gradient:radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent);
+    --cursor-cover-color:#9f94c6;
     --image-shadow-color:#F3EDE9AA;
     --blue-yellow-gradient:linear-gradient(to right bottom, #365163, #635536);
     --green-gradient:linear-gradient(to right bottom, #6E8464, #2B5135);
     --blue-black-gradient:linear-gradient(to left bottom, #434B66, #000);
+    --cursor-mix-blend-mode:screen;
 }
 body {
     font-family: helveticalight;
@@ -84,8 +84,8 @@ input:-internal-autofill-selected {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-    backdrop-filter: blur(20px) brightness(80%);
+    z-index: 10;
+    backdrop-filter: blur(20px);
     /* padding: 1% 10%; */
 }
 .navbar-nav{
@@ -179,10 +179,11 @@ input:-internal-autofill-selected {
 }
 
 .button {
-    color: var(--main-text);
+    color: var(--head-text);
     background-color: transparent;
     border: 3px solid var(--main-text);
     padding: 1% 10%;
+    font-weight: bold;
 }
 /* .button:hover , .button:focus {
     color: #000;
@@ -272,13 +273,30 @@ input:-internal-autofill-selected {
     box-shadow: 10px 10px 25px var(--image-shadow-color);
 }
 
-#cursor {
+#cursor-cover {
+    background-color: var(--cursor-cover-color) ;
     opacity: 0;
     position: fixed;
     top: 0px;
     left: 0px;
-    mix-blend-mode: screen;
+    mix-blend-mode: var(--cursor-mix-blend-mode);
     pointer-events: none;
+    height: 30px;
+    width: 30px;
+    z-index: 9998;
+}
+#cursor {
+    background-color: var(--head-text);
+    opacity: 0;
+    height: 5px;
+    width: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    mix-blend-mode: var(--cursor-mix-blend-mode);
+    pointer-events: none;
+    z-index: 9999;
 }
 .cursorhide:-webkit-any-link, .cursorhide:-webkit-any-link:hover, .cursorhide:-webkit-any-link:focus, .cursorhover:-webkit-any-link, .cursorhover:-webkit-any-link:hover, .cursorhover:-webkit-any-link:focus {
     cursor: none!important;
@@ -288,4 +306,8 @@ input:-internal-autofill-selected {
 }
 #light-mode:hover {
     color: var(--pink-color)!important;
+}
+
+#contact-form {
+    color: var(--head-text);
 }

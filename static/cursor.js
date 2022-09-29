@@ -1,5 +1,6 @@
 const App = {
 	cursorEl: document.getElementById("cursor"),
+	cursorCoverEl: document.getElementById("cursor-cover"),
 
 	linkEls: document.querySelectorAll(".cursorhover, .cursorhide"),
     hideEls: document.querySelectorAll(".cursorhide"),
@@ -16,15 +17,19 @@ const App = {
 		const onMouseMove = (ev) => {
 			const { clientX, clientY } = ev
 
-			const CIRCULAR_POINTER_SIZE = 100
+			const CIRCULAR_POINTER_SIZE = 30
+			const INNER_POINTER_SIZE = 5
 
 			let newCursorX = undefined
 			let newCursorY = undefined
 
-			let newCursorWidth = undefined
-			let newCursorHeight = undefined
+			let newCursorCoverX = undefined
+			let newCursorCoverY = undefined
 
-			let newCursorBorderRadius = undefined
+			let newCursorCoverWidth = undefined
+			let newCursorCoverHeight = undefined
+
+			let newCursorCoverBorderRadius = undefined
             let newCursorOpacity = undefined
 
             let newCursorBackground = undefined
@@ -39,42 +44,43 @@ const App = {
                     newCursorOpacity = 1
                 }
 
-				newCursorX = currentlyHoveredLinkBoundings.x
-				newCursorY = currentlyHoveredLinkBoundings.y 
+				newCursorX = clientX - INNER_POINTER_SIZE / 2
+				newCursorY = clientY - INNER_POINTER_SIZE / 2
 
-				newCursorWidth = currentlyHoveredLinkBoundings.width
-				newCursorHeight = currentlyHoveredLinkBoundings.height
+				newCursorCoverX = currentlyHoveredLinkBoundings.x
+				newCursorCoverY = currentlyHoveredLinkBoundings.y 
 
-				newCursorBorderRadius = window.getComputedStyle(this.currentlyHoveredLinkEl).borderRadius || 0
+				newCursorCoverWidth = currentlyHoveredLinkBoundings.width
+				newCursorCoverHeight = currentlyHoveredLinkBoundings.height
 
-                newCursorBackground = "#3F4776"
-                // #2A2342 white background me kam aayega
-
+				newCursorCoverBorderRadius = window.getComputedStyle(this.currentlyHoveredLinkEl).borderRadius || 0
                 
 			} else {
 
-				newCursorX = clientX - CIRCULAR_POINTER_SIZE / 2
-				newCursorY = clientY - CIRCULAR_POINTER_SIZE / 2
+				newCursorX = clientX - INNER_POINTER_SIZE / 2
+				newCursorY = clientY - INNER_POINTER_SIZE / 2
+				
+				newCursorCoverX = clientX - CIRCULAR_POINTER_SIZE / 2 
+				newCursorCoverY = clientY - CIRCULAR_POINTER_SIZE / 2
 
-				newCursorWidth = CIRCULAR_POINTER_SIZE
-				newCursorHeight = CIRCULAR_POINTER_SIZE
+				newCursorCoverWidth = CIRCULAR_POINTER_SIZE
+				newCursorCoverHeight = CIRCULAR_POINTER_SIZE
 
-				newCursorBorderRadius = "50%"
+				newCursorCoverBorderRadius = "50%"
 
                 newCursorOpacity = 1
 
-                newCursorBackground = "radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent)"
 			}
 
-			if (newCursorWidth + "px" !== this.cursorEl.style.width) {
-				this.cursorEl.style.transition = "0.1s all"
+			if (newCursorCoverWidth + "px" !== this.cursorCoverEl.style.width) {
+				this.cursorCoverEl.style.transition = "0.1s all"
 
 				clearTimeout(this.lastClearTransitionTimeout)
 				this.lastClearTransitionTimeout = undefined
 			} else {
 				if (!this.lastClearTransitionTimeout) {
 					this.lastClearTransitionTimeout = setTimeout(() => {
-						this.cursorEl.style.transition = "none"
+						this.cursorCoverEl.style.transition = "none"
 
 						this.lastClearTransitionTimeout = undefined
 					}, 100)
@@ -82,14 +88,19 @@ const App = {
 			}
 
 			this.cursorEl.style.opacity = newCursorOpacity
+			this.cursorCoverEl.style.opacity = newCursorOpacity
+			
 			this.cursorEl.style.transform = `translate(
 				${newCursorX}px,
 				${newCursorY}px
 			)`
-			this.cursorEl.style.width = newCursorWidth + "px"
-			this.cursorEl.style.height = newCursorHeight + "px"
-			this.cursorEl.style.borderRadius = newCursorBorderRadius
-            this.cursorEl.style.background = newCursorBackground
+			this.cursorCoverEl.style.transform = `translate(
+				${newCursorCoverX}px,
+				${newCursorCoverY}px
+			)`
+			this.cursorCoverEl.style.width = newCursorCoverWidth + "px"
+			this.cursorCoverEl.style.height = newCursorCoverHeight + "px"
+			this.cursorCoverEl.style.borderRadius = newCursorCoverBorderRadius
 		}
 
 		window.addEventListener("mousemove", (ev) => {
