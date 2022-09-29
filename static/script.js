@@ -1,4 +1,4 @@
-const background = "#000"
+const background = "#000";
 const mainText = "#F3EDE9";
 const headText = "#FFFFFF";
 const pinkGradient = "linear-gradient(to right, #DE42E5, #CD32C4)";
@@ -25,14 +25,12 @@ const blueBlackGradientL = "linear-gradient(to left bottom, #adb3c9, #fff)";
 
 document.addEventListener('DOMContentLoaded', () => {
     const el = document.getElementById('light-mode');
-    console.log(el);
-    el.onclick = () => {
-        console.log(el);
+    el.addEventListener('click', () => {
         // document.body.classList.toggle('light-mode');
         let r = document.querySelector(':root');
-        console.log(getComputedStyle(r).getPropertyValue('--main-text'), mainText);
 
-        if (getComputedStyle(r).getPropertyValue('--main-text') == mainText) {
+        if (getComputedStyle(r).getPropertyValue('--background') == background) {
+            console.log('log');
             r.style.setProperty('--background', backgroundL);
             r.style.setProperty('--main-text', mainTextL);
             r.style.setProperty('--head-text', headTextL);
@@ -61,5 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.getElementById('cursor').style.mixBlendMode = "screen";
         }
-    }
+    });
 });

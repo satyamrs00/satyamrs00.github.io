@@ -1,4 +1,25 @@
+const canvasColorD = 'rgba(0,0,0,alp)';
+const globalCompositeOperationLineOnCanvasD = 'lighter';
+
+const canvasColorL = 'rgba(255,255,255,alp)';
+const globalCompositeOperationLineOnCanvasL = 'source-over';
+
+
 document.addEventListener( 'DOMContentLoaded', function(){
+    let canvasColor = canvasColorD;
+    let globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
+
+    document.getElementById('light-mode').addEventListener('click', () => {
+        if (canvasColor == canvasColorD) {
+            canvasColor = canvasColorL;
+            globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasL;
+        } else {
+            canvasColor = canvasColorD;
+            globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
+        }
+    });
+
+
     var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
@@ -35,20 +56,20 @@ document.addEventListener( 'DOMContentLoaded', function(){
     
     baseRad = Math.PI * 2 / 6;
     
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     ctx.fillRect( 0, 0, w, h );
 
     function loop() {
     
         window.requestAnimationFrame( loop );
     
-        ++tick;
+        --tick;
     
         ctx.globalCompositeOperation = 'source-over';
         ctx.shadowBlur = 0;
-        ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', opts.repaintAlpha );
+        ctx.fillStyle = canvasColor.replace( 'alp', opts.repaintAlpha );
         ctx.fillRect( 0, 0, w, h );
-        ctx.globalCompositeOperation = 'lighter';
+        ctx.globalCompositeOperation = globalCompositeOperationLineOnCanvas;
         
         if( lines.length < opts.count && Math.random() < opts.spawnChance )
             lines.push( new Line );

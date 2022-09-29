@@ -7,17 +7,17 @@
     src: url(/fonts/helvetica-w01-light.ttf);
 }
 :root {
-    --background: #000;
-    --main-text: #F3EDE9;
-    --head-text: #FFFFFF;
-    --pink-gradient: linear-gradient(to right, #DE42E5, #CD32C4);
-    --pink-color: #CD32C4;
-    --blue-cursor-color: #3F4776;
-    --cursor-gradient: radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent);
-    --image-shadow-color: #F3EDE9AA;
-    --blue-yellow-gradient: linear-gradient(to right bottom, #365163, #635536);
-    --green-gradient: linear-gradient(to right bottom, #6E8464, #2B5135);
-    --blue-black-gradient: linear-gradient(to left bottom, #434B66, #000);
+    --background:#000;
+    --main-text:#F3EDE9;
+    --head-text:#FFFFFF;
+    --pink-gradient:linear-gradient(to right, #DE42E5, #CD32C4);
+    --pink-color:#CD32C4;
+    --blue-cursor-color:#3F4776;
+    --cursor-gradient:radial-gradient(circle closest-side, #CD32C4, #3F4776, #3F4776, #3F4776, transparent);
+    --image-shadow-color:#F3EDE9AA;
+    --blue-yellow-gradient:linear-gradient(to right bottom, #365163, #635536);
+    --green-gradient:linear-gradient(to right bottom, #6E8464, #2B5135);
+    --blue-black-gradient:linear-gradient(to left bottom, #434B66, #000);
 }
 body {
     font-family: helveticalight;
@@ -66,10 +66,10 @@ input:-internal-autofill-selected {
     width: 100%;
     /* filter: brightness(50%); */
     position: relative;
-    color: #F3EDE9!important;
+    color: var(--head-text);
 }
 #home2 {
-    backdrop-filter: brightness(50%);
+    backdrop-filter: brightness(70%);
     padding: 0px 20%;
 }
 #c {
@@ -132,8 +132,8 @@ i {
     position: relative;
 }
 #explore {
-    color: #F3EDE9;
-    border-color: #F3EDE9;
+    color: var(--head-text);
+    border-color: var(--head-text);
 }
 #home-text{
     filter: brightness(200%);
