@@ -105,9 +105,6 @@ input:-internal-autofill-selected {
     color: var(--main-text);
     cursor: none!important;
 }
-i {
-    color: var(--main-text);
-}
 .nav-link::after, #top-name::after {
     content: "";
     position: absolute;
@@ -290,5 +287,5 @@ i {
     border-radius: 0.3rem;
 }
 #light-mode:hover {
-    color: var(--pink-color);
+    color: var(--pink-color)!important;
 }
