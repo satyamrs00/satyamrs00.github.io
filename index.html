@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Satyam Sagar portfolio website">
+        <meta name="theme-color" content="#9f94c6">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#9f94c6">
         
         <link href="/static/assets/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="/static/assets/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
@@ -38,7 +40,7 @@
         <nav class="navbar navbar-expand-sm px-2 px-sm-5">
             <div class="container-fluid">
                 <a class="cursorhide py-1 py-sm-2" id="top-name" aria-label="Go to home" href="#">@satyamrs00</a>
-                <div class="d-flex cursorhide" id="light-mode">
+                <div class="d-flex cursorhide me-auto" id="light-mode">
                     <i class="fa-solid fa-circle-half-stroke fs-5 p-2"></i>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +90,7 @@
                     <div class="text-center py-4">
                         A web application for handling a pizza restaurant’s online orders
                     </div>
-                    <div class="text-center">
+                    <div class="text-center mt-3">
                         <a class="button cursorhover" aria-label="Go to pinocchio pizza app" href="https://pinopizza.herokuapp.com" target="_blank">Visit Website <i class="fa fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -122,8 +124,28 @@
                     </div>
                     
                 </div>
-                <div class="pb-5 pt-0 px-3 px-sm-5 ">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <div class="pb-4 pt-0 px-3 px-sm-5 ">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-3 pb-1">
+                            <i class="fa fa-circle-check px-2"></i>
+                            Highly customizable
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 pb-1">
+                            <i class="fa fa-circle-check px-2"></i>
+                            Super-fast delivery
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 pb-1">
+                            <i class="fa fa-circle-check px-2"></i>
+                            Email confirmation
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3 pb-1">
+                            <i class="fa fa-circle-check px-2"></i>
+                            One-click reorder
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-5">
+                    Made using <span style="color: var(--head-text);">Django</span>, deployed using <span style="color: var(--head-text);">Heroku<span>
                 </div>
                 <!-- <div class="row py-2 py-md-5">
                     <div id="pizzaimgdiv" class="col-12 col-md-7 my-4">
@@ -147,27 +169,38 @@
             </div>
 
             <div id="network" class="pb-5 container-fluid">
-                <div class="row py-2 py-md-5 px-2">
+                <div class="row py-2 py-md-4 py-lg-5 px-2">
                     <div id="networkimgdiv" class="col-12 col-lg-7 mt-5">
                         <img id="networkimg1" class="w-100" src="static/images/Screenshot (193).webp" alt="">
                     </div>
-                    <div class="col-12 col-lg-5 p-0 mt-5 mb-0 mb-md-5 d-flex flex-column justify-content-evenly">
+                    <div class="col-12 col-lg-5 p-0 mt-5 mb-2 mb-md-3 mb-lg-5 d-flex flex-column justify-content-evenly">
                         <div class="bighead ls-n text-center pb-3 pt-0 pt-md-3">
                             Network
                         </div>
-                        <div class="py-3 ps-3">
+                        <div class="py-4 ps-3">
                             A Twitter-like social network website for making posts and following users
                         </div>
-                        <ul class="p-3">
-                            <li><i class="fa fa-circle-check"></i> Users can order pizza online</li>
-                            <li><i class="fa fa-circle-check"></i> Users can view their order history</li>
-                            <li><i class="fa fa-circle-check"></i> Admin can view all orders</li>
-                            <li><i class="fa fa-circle-check"></i> Admin can mark orders as complete</li>
-                            <li><i class="fa fa-circle-check"></i> Admin can add new pizzas</li>
-                        </ul>
+                        <div class="d-flex-column ps-3">
+                            <div class="pb-1">
+                                <i class="fa fa-circle-check px-2"></i>
+                                Users can follow other users
+                            </div>
+                            <div class="pb-1">
+                                <i class="fa fa-circle-check px-2"></i>
+                                Users can like posts
+                            </div>
+                            <div class="pb-1">
+                                <i class="fa fa-circle-check px-2"></i>
+                                Users can edit their own posts
+                            </div>
+                            <div class="pb-1">
+                                <i class="fa fa-circle-check px-2"></i>
+                                Django, Bootstrap, JavaScript, Heroku
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="pb-5 ps-3">
+                <div class="pb-5 ps-3 pt-3">
                     <a class="button mb-5 cursorhover" aria-label="Go to network app" href="https://thisnetwork.herokuapp.com" target="_blank">Visit Website <i class="fa fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -179,15 +212,15 @@
                 <div class="text-center py-4">
                     A password manager application
                 </div>
-                <div class="row px-4 py-3">
-                    <div class="col-12 col-sm-6 mb-3">
+                <div class="row px-2 px-lg-4 py-3">
+                    <div class="col-12 col-lg-6 mb-5">
                         <img id="pgimg1" class="w-100 pgimg" src="static/images/project1_2.webp" alt="">
                     </div>
-                    <div class="col-12 col-sm-6 mb-3">
+                    <div class="col-12 col-lg-6 mb-3">
                         <img id="pgimg2" class="w-100 pgimg" src="static/images/project1_1.webp" alt="">
                     </div>
                 </div>
-                <div class="pb-5 pt-3 px-3 px-sm-5 ">
+                <div class="pb-5 pt-3 px-3 px-md-5 ">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </div>
             </div>
@@ -231,49 +264,49 @@
                     <ul class="fa-ul">
                         <li class="py-4">
                             <span class="fa-li"><i class="fa fa-circle-check"></i></span>
-                            <div class="fw-bold">
+                            <div class="fw-bold mb-3">
                                 Hire me
                             </div>
                             If you have a project where you need my help, that's cool!
                         </li>
                         <li class="py-4">
                             <span class="fa-li"><i class="fa fa-circle-check"></i></span>
-                            <div class="fw-bold">
+                            <div class="fw-bold mb-3">
                                 Collaborate
                             </div>
                             Want to build something together and have fun as well? I am listening!
                         </li>
                         <li class="py-4">
                             <span class="fa-li"><i class="fa fa-circle-check"></i></span>
-                            <div class="fw-bold">
+                            <div class="fw-bold mb-3">
                                 Just say hi
                             </div>
                             Want to talk design, coding, marketing, product development? Ping me!
                         </li>
                     </ul>
-                    <div class="d-flex justify-content-evenly py-3 fs-4">
-                        <a class="cursorhover w-50 text-center contacticon" title="Github" aria-label="Go to github profile" href="https://github.com/satyamrs00" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a class="cursorhover w-50 text-center contacticon" title="LinkedIn" aria-label="Go to linkedIn profile" href="https://linkedin.com/in/satyamrs00" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a class="cursorhover w-50 text-center contacticon" title="Whatsapp" aria-label="Go to whatsapp chat" href="https://wa.me/9798581008" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>                        
-                        <a class="cursorhover w-50 text-center contacticon" title="Telegram" aria-label="Go to telegram chat" href="https://telegram.me/satyamrs00" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-                        <a class="cursorhover w-50 text-center contacticon" title="Download Resume" aria-label="Download resume" href="static/resume.pdf" download><i class="fa fa-file"></i></a>
+                    <div class="d-flex justify-content-start py-4 fs-3">
+                        <a class="cursorhover text-center contacticon" title="Github" aria-label="Go to github profile" href="https://github.com/satyamrs00" target="_blank"><i class="fa-brands fa-github p-3"></i></a>
+                        <a class="cursorhover text-center contacticon" title="LinkedIn" aria-label="Go to linkedIn profile" href="https://linkedin.com/in/satyamrs00" target="_blank"><i class="fa-brands fa-linkedin p-3"></i></a>
+                        <a class="cursorhover text-center contacticon" title="Whatsapp" aria-label="Go to whatsapp chat" href="https://wa.me/+91-9798581008" target="_blank"><i class="fa-brands fa-whatsapp p-3"></i></a>                        
+                        <a class="cursorhover text-center contacticon" title="Telegram" aria-label="Go to telegram chat" href="https://telegram.me/satyamrs00" target="_blank"><i class="fa-brands fa-telegram p-3"></i></a>
+                        <a class="cursorhover text-center contacticon" title="Download Resume" aria-label="Download resume" href="static/resume.pdf" download><i class="fa fa-file p-3"></i></a>
                         <!-- <a class="cursorhover w-50 text-center contacticon" href="" target="_blank"><i class="fa fa-coffee"></i></a> -->
                     </div>
                 </div>
                 <form id="contact-form" action="https://formspree.io/f/maykorpq" method="POST" class="py-3 order-1 order-md-2 col-12 col-md-6 d-flex flex-column">
                     <label class="w-100 py-2">
-                        <input class="w-100 mt-1 p-2 button cursorhover" type="text" name="name" required autocomplete="off" placeholder="Name *">
+                        <input class="w-100 mt-1 p-2 button cursorhover" type="text" name="name" id="name" required autocomplete="off" placeholder="Name *">
                     </label>
                     <label class="w-100 py-2">
-                        <input class="w-100 mt-1 p-2 button cursorhover" type="email" name="email" required autocomplete="off" placeholder="Email *">
+                        <input class="w-100 mt-1 p-2 button cursorhover" type="email" name="email" id="email" required autocomplete="off" placeholder="Email *">
                     </label>
                     <label class="w-100 py-2">
-                        <input class="w-100 mt-1 p-2 button cursorhover" type="text" name="subject" required autocomplete="off" placeholder="Subject *">
+                        <input class="w-100 mt-1 p-2 button cursorhover" type="text" name="subject" id="subject" required autocomplete="off" placeholder="Subject *">
                     </label>
                     <label class="w-100 py-2">
-                        <textarea class="w-100 mt-1 p-2 button cursorhover" name="message" rows="6" placeholder="Message *"></textarea>
+                        <textarea class="w-100 mt-1 p-2 button cursorhover" name="message" id="message" rows="6" placeholder="Message *"></textarea>
                     </label>
-                    <button type="submit" class="button cursorhover">Send</button>
+                    <button type="submit" id="form-send" class="button cursorhover">Send</button>
                 </form>
             </div>
         </div>
@@ -282,6 +315,7 @@
         <span id="cursor"></span>
         <script src="static/homeCanvas.js" type="text/javascript"></script>
         <script src="static/cursor.js" type="text/javascript"></script>
+        <script src="/static/light-dark.js" type="text/javascript"></script>
         <script src="/static/script.js" type="text/javascript"></script>
     </body>
 </html>

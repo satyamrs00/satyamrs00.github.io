@@ -73,7 +73,7 @@ const App = {
 			}
 
 			if (newCursorCoverWidth + "px" !== this.cursorCoverEl.style.width) {
-				this.cursorCoverEl.style.transition = "0.1s all"
+				this.cursorCoverEl.style.transition = "0.15s all"
 
 				clearTimeout(this.lastClearTransitionTimeout)
 				this.lastClearTransitionTimeout = undefined
@@ -83,7 +83,7 @@ const App = {
 						this.cursorCoverEl.style.transition = "none"
 
 						this.lastClearTransitionTimeout = undefined
-					}, 100)
+					}, 150)
 				}
 			}
 

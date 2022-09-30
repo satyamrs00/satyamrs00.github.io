@@ -69,7 +69,7 @@ input:-internal-autofill-selected {
     color: var(--head-text);
 }
 #home2 {
-    backdrop-filter: brightness(70%);
+    backdrop-filter: brightness(90%);
     padding: 0px 20%;
 }
 #c {

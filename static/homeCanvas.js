@@ -1,5 +1,5 @@
 const canvasColorD = 'rgba(0,0,0,alp)';
-const globalCompositeOperationLineOnCanvasD = 'lighter';
+const globalCompositeOperationLineOnCanvasD = 'source-over';
 
 const canvasColorL = 'rgba(255,255,255,alp)';
 const globalCompositeOperationLineOnCanvasL = 'source-over';
