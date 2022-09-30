@@ -32,8 +32,6 @@ const App = {
 			let newCursorCoverBorderRadius = undefined
             let newCursorOpacity = undefined
 
-            let newCursorBackground = undefined
-
             if (this.currentlyHoveredLinkEl) {
 				const currentlyHoveredLinkBoundings =
 					this.currentlyHoveredLinkEl.getBoundingClientRect()
@@ -104,6 +102,9 @@ const App = {
 		}
 
 		window.addEventListener("mousemove", (ev) => {
+			requestAnimationFrame(() => onMouseMove(ev))
+		})
+		window.addEventListener("scroll", (ev) => {
 			requestAnimationFrame(() => onMouseMove(ev))
 		})
 	},

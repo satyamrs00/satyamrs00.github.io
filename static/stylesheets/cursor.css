@@ -26,3 +26,11 @@
 .cursorhide:-webkit-any-link, .cursorhide:-webkit-any-link:hover, .cursorhide:-webkit-any-link:focus, .cursorhover:-webkit-any-link, .cursorhover:-webkit-any-link:hover, .cursorhover:-webkit-any-link:focus {
     cursor: none!important;
 }
+@media(hover:none) and (pointer:coarse){
+    #cursor{
+        display:none;
+    }
+    #cursor-cover{
+        display:none;
+    }
+}
