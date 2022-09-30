@@ -1,0 +1,128 @@
+@font-face {
+    font-family: helveticabold;
+    src: url(/fonts/helvetica-w01-bold.ttf);
+}
+@font-face {
+    font-family: helveticalight;
+    src: url(/fonts/helvetica-w01-light.ttf);
+}
+:root {
+    --background:#000;
+    --main-text:#F3EDE9;
+    --head-text:#FFFFFF;
+    --pink-gradient:linear-gradient(to right, #CD32C4, #9f94c6);
+    --pink-color:#CD32C4;
+    --cursor-cover-color:#9f94c6;
+    --image-shadow-color:#F3EDE9AA;
+    --blue-yellow-gradient:linear-gradient(to right bottom, #365163, #635536);
+    --green-gradient:linear-gradient(to right bottom, #6E8464, #2B5135);
+    --blue-black-gradient:linear-gradient(to left bottom, #434B66, #000);
+    --cursor-mix-blend-mode:screen;
+}
+body {
+    font-family: helveticalight;
+    color: var(--main-text);
+    cursor: none;
+    background-color: var(--background);
+}
+a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+a:hover {
+    text-decoration: none;
+    color: var(--main-text);
+    cursor: none!important;
+}
+ul{
+    list-style-type: none;
+    padding: 0%;
+}
+input , textarea {
+    cursor: none;
+}
+input:focus-visible , textarea:focus-visible {
+    outline: none;
+    cursor: none;
+}
+label, button, button:hover, button:not(:disabled), [type=submit]:not(:disabled), [type=reset]:not(:disabled), [type=button]:not(:disabled) {
+    cursor: none;
+}
+input:-internal-autofill-selected {
+    background: none!important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: var(--main-text) !important;
+    border: 3px solid var(--main-text) !important;
+    appearance: none!important;
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+}
+.bighead{
+    color: var(--head-text);
+    font-family: helveticabold;
+    /* font-size: 4rem; */
+    z-index: 1;
+    /* letter-spacing: 1rem; */
+    /* line-height: 4rem; */
+}
+@media (min-width: 768px) {
+    .bighead{
+        font-size: 4rem;
+        letter-spacing: 1rem;
+        line-height: 4rem;
+    }
+    #roles {
+        font-size: 1.3rem!important;
+    }
+}
+@media (min-width: 1280px) {
+    .bighead{
+        font-size: 5rem;
+        letter-spacing: 1.5rem;
+        line-height: 5rem;
+    }
+    #roles {
+        font-size: 1.5rem!important;
+    }
+}
+@media (max-width: 768px) {
+    .bighead{
+        font-size: 3rem;
+        letter-spacing: 0.7rem;
+        line-height: 3rem;
+    }
+}
+@media (max-width: 576px) {
+    .bighead{
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        line-height: 2rem;
+    }
+}
+
+.button {
+    color: var(--head-text);
+    background-color: transparent;
+    border: 3px solid var(--main-text);
+    padding: 1% 10%;
+    font-weight: bold;
+}
+
+.ls-n {
+    letter-spacing: normal;
+}
+
+#about {
+    background-image: var(--blue-black-gradient);
+    min-height: 100vh;
+}
+
+.toolicon {
+    width: 60px;
+}
+
+
+#light-mode:hover {
+    color: var(--pink-color)!important;
+}

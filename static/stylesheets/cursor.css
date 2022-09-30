@@ -1,0 +1,28 @@
+#cursor-cover {
+    background-color: var(--cursor-cover-color) ;
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    mix-blend-mode: var(--cursor-mix-blend-mode);
+    pointer-events: none;
+    height: 30px;
+    width: 30px;
+    z-index: 9998;
+}
+#cursor {
+    background-color: var(--head-text);
+    opacity: 0;
+    height: 5px;
+    width: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    mix-blend-mode: var(--cursor-mix-blend-mode);
+    pointer-events: none;
+    z-index: 9999;
+}
+.cursorhide:-webkit-any-link, .cursorhide:-webkit-any-link:hover, .cursorhide:-webkit-any-link:focus, .cursorhover:-webkit-any-link, .cursorhover:-webkit-any-link:hover, .cursorhover:-webkit-any-link:focus {
+    cursor: none!important;
+}

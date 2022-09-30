@@ -1,0 +1,11 @@
+#contact {
+    /* background-color: #000; */
+    height: auto;
+	overflow: hidden;
+}
+.contacticon {
+    border-radius: 0.3rem;
+}
+#contact-form {
+    color: var(--head-text);
+}
