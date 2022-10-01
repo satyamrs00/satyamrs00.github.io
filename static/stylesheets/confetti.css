@@ -11,7 +11,7 @@
 	content: '';
 	display: block;
 	width: 140%;
-	height: 100%;
+	height: 300%;
 	left: -20%;
 	z-index: -1000;
 	transition: all ease-in-out 0.5s;
@@ -23,7 +23,7 @@
 
 *[data-confettis]:before {
 	display: none;
-	top: -75%;
+	top: -225%;
 	background-image:
 		radial-gradient(circle, rgb(232, 107, 170) 20%, transparent 20%),
 		radial-gradient(circle, transparent 20%, rgb(232, 232, 107) 20%, transparent 30%),
@@ -39,7 +39,7 @@
 
 *[data-confettis]:after {
 	display: none;
-	bottom: -75%;
+	bottom: -225%;
 	background-image:
 		radial-gradient(circle, rgb(255, 195, 130) 20%, transparent 20%),
 		radial-gradient(circle, rgb(121, 117, 255) 20%, transparent 20%),
@@ -53,12 +53,12 @@
 
 *[data-confettis].confettis-on:before {
 	display: block;
-	animation: topBubbles ease-in-out 0.75s forwards;
+	animation: topBubbles ease-in-out 1s forwards;
 }
 
 *[data-confettis].confettis-on:after {
 	display: block;
-	animation: bottomBubbles ease-in-out 0.75s forwards;
+	animation: bottomBubbles ease-in-out 1s forwards;
 }
 @keyframes topBubbles { 
 	0% {

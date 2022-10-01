@@ -37,21 +37,19 @@
 
 body::-webkit-scrollbar {
     width: 0.5rem;
-    cursor: none;
 }
 body::-webkit-scrollbar-track {
     background: transparent;
-    cursor: none;
 }
 body::-webkit-scrollbar-thumb {
     background: var(--cursor-cover-color);
     border-radius: 0.5rem;
-    cursor: none;
 }
 body::-webkit-scrollbar-thumb:hover {
     background: var(--head-text);
 }
 body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cursor-cover-color) transparent;
 }

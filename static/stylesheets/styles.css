@@ -19,6 +19,22 @@
     --blue-black-gradient:linear-gradient(to left bottom, #434B66, #000);
     --cursor-mix-blend-mode:screen;
 }
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(50%) scale(0.7, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scaleY(1, 1);
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: helveticalight;
     color: var(--main-text);
@@ -125,4 +141,7 @@ input:-internal-autofill-selected {
 
 #light-mode:hover {
     color: var(--pink-color)!important;
+}
+.fade-up {
+    opacity: 0;
 }
