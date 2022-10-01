@@ -1,0 +1,1 @@
+i can use js to load image when it is like 100px from entering viewport
