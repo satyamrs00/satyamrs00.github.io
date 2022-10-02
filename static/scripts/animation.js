@@ -88,5 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.animation = '';
             }
         });
+
+        
     });
 });
