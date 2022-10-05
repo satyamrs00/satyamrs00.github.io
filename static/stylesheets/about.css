@@ -17,3 +17,9 @@
     height: auto;
     align-items: flex-start;
 }
+#me {
+    background-color: var(--background);
+}
+#skills {
+    background-image: var(--blue-black-gradient);
+}

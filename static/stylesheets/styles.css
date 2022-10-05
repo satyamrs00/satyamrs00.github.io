@@ -129,15 +129,6 @@ input:-internal-autofill-selected {
     letter-spacing: normal;
 }
 
-#about {
-    background-image: var(--blue-black-gradient);
-    min-height: 100vh;
-}
-
-.toolicon {
-    width: 60px;
-}
-
 
 #light-mode:hover {
     color: var(--pink-color)!important;

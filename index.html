@@ -54,7 +54,7 @@
                     <i class="fa-solid fa-circle-half-stroke fs-5 p-2"></i>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars button"></i>
+                    <i class="fa fa-bars button" id="nav-menu-switch"></i>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end ms-auto align-self-stretch" id="navbarNavAltMarkup">
                     <div class="navbar-nav justify-content-end ms-auto">
@@ -197,22 +197,30 @@
                         <div class="py-4 ps-3">
                             A Twitter-like social network website for making posts and following users
                         </div>
-                        <div class="d-flex-column ps-3">
+                        <div class="d-flex-column ps-3" id="">
                             <div class="pb-1">
                                 <i class="fa fa-circle-check px-2"></i>
-                                Users can follow other users
+                                <div class="d-inline-block">
+                                    Users can follow other users
+                                </div>
                             </div>
                             <div class="pb-1">
                                 <i class="fa fa-circle-check px-2"></i>
-                                Users can like posts
+                                <div class="d-inline-block">
+                                    Users can like posts
+                                </div>
                             </div>
                             <div class="pb-1">
                                 <i class="fa fa-circle-check px-2"></i>
-                                Users can edit their own posts
+                                <div class="d-inline-block">
+                                    Users can edit their own posts
+                                </div>
                             </div>
                             <div class="pb-1">
                                 <i class="fa fa-circle-check px-2"></i>
-                                Django, Bootstrap, JavaScript, Heroku
+                                <div class="d-inline-block">
+                                    Django, Bootstrap, JS, Heroku
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -237,18 +245,42 @@
                         <img id="pgimg2" class="w-100 pgimg from-left-top" src="static/images/project1_1.webp" alt="">
                     </div>
                 </div>
-                <div class="pb-5 pt-3 px-3 px-md-5 ">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <div class="pb-5 pt-3 px-3 px-md-5 row">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <i class="fa fa-circle-check"></i>
+                        <span class="px-2">Encrypted storage</span>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <i class="fa fa-circle-check"></i>
+                        <span class="px-2">Deletion support</span>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <i class="fa fa-circle-check"></i>
+                        <span class="px-2">User Authentication</span>
+                    </div>    
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <i class="fa fa-circle-check"></i>
+                        <span class="px-2">Flask, Bootstrap, SQLite</span>
+                    </div>
+                </div>
+                <div>
+                    <a class="button mb-5 ms-3 ms-md-5 cursorhover d-inline-block come-from-far-left" aria-label="Go to password demo video" href="https://youtu.be/iNvzLyZ2rB0" target="_blank">View demo video <i class="fa fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
 
 
-        <div id="about" class="py-5 px-3">
-            <div id="me">
-
-            </div>
-            <div id="skills">
+        <div id="about" class="">
+            <!-- <div id="me" class="py-5 px-3 px-md-5">
+                <div class="bighead ls-n py-3">
+                    Me
+                </div>
+                <div class="row">
+                    <div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="skills" class="py-5 px-3">
                 <div class="bighead ls-n p-4 fade-up my-2 my-sm-3 my-md-4 text-center">
                     Skills
                 </div>
@@ -319,7 +351,7 @@
         </div>
 
 
-        <div id="contact"  class="p-5 p-md-5 m-0 w-100">
+        <div id="contact"  class="px-3 px-md-5 py-5 m-0 w-100">
             <div class="bighead ls-n fade-up pt-3 pt-sm-4 py-md-5 pb-2">
                 Get in touch
             </div>
@@ -351,7 +383,7 @@
                     <div class="d-flex justify-content-start py-4 fs-3">
                         <a class="cursorhover text-center contacticon come-from-far-left" title="Github" aria-label="Go to github profile" href="https://github.com/satyamrs00" target="_blank"><i class="fa-brands fa-github p-3"></i></a>
                         <a class="cursorhover text-center contacticon come-from-far-left" title="LinkedIn" aria-label="Go to linkedIn profile" href="https://linkedin.com/in/satyamrs00" target="_blank"><i class="fa-brands fa-linkedin p-3"></i></a>
-                        <a class="cursorhover text-center contacticon come-from-far-left" title="Whatsapp" aria-label="Go to whatsapp chat" href="https://wa.me/+91-9798581008" target="_blank"><i class="fa-brands fa-whatsapp p-3"></i></a>                        
+                        <!-- <a class="cursorhover text-center contacticon come-from-far-left" title="Whatsapp" aria-label="Go to whatsapp chat" href="https://wa.me/+91-XXXXXXXXXX" target="_blank"><i class="fa-brands fa-whatsapp p-3"></i></a>                         -->
                         <a class="cursorhover text-center contacticon come-from-far-left" title="Telegram" aria-label="Go to telegram chat" href="https://telegram.me/satyamrs00" target="_blank"><i class="fa-brands fa-telegram p-3"></i></a>
                         <a class="cursorhover text-center contacticon come-from-far-left" title="Download Resume" aria-label="Download resume" href="/static/assets/resume.pdf" download><i class="fa fa-file p-3"></i></a>
                         <!-- <a class="cursorhover w-50 text-center contacticon" href="" target="_blank"><i class="fa fa-coffee"></i></a> -->
