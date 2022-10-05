@@ -1,12 +1,13 @@
 {
     "name": "Satyam Sagar Portfolio",
-    "start_url": "/",
+    "start_url": "./index.html",
     "display": "standalone",
     "icons": [
         {
-            "src": "/static/images/favicon (1).ico",
-            "sizes": "any",
-            "type": "image/x-icon"
+            "src": "static/images/libraryapi2.webp",
+            "sizes": "48×48 72x72 96x96 128x128 256x256 any",
+            "type": "image/webp"
         }
-    ]
+    ],
+    "theme_color": "#000000"
 }
