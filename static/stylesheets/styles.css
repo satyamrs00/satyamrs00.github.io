@@ -1,10 +1,12 @@
 @font-face {
     font-family: helveticabold;
     src: url(/fonts/helvetica-w01-bold.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: helveticalight;
     src: url(/fonts/helvetica-w01-light.ttf);
+    font-display: swap;
 }
 :root {
     --background:#000;
