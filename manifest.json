@@ -5,9 +5,16 @@
     "icons": [
         {
             "src": "static/images/libraryapi2.webp",
-            "sizes": "48×48 72x72 96x96 128x128 256x256 any",
+            "sizes": "48x48 72x72 96x96 128x128 256x256 512x512 any",
             "type": "image/webp"
+        },
+        {
+            "src": "static/images/Screenshot_2022-09-14_115425-removebg.png",
+            "sizes": "48x48 72x72 96x96 128x128 256x256 512x512 any",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
-    "theme_color": "#000000"
+    "theme_color": "#000000",
+    "background_color": "#000000"
 }
