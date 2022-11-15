@@ -1,21 +1,32 @@
-const canvasColorD = 'rgba(0,0,0,alp)';
-const globalCompositeOperationLineOnCanvasD = 'source-over';
+const canvasColorD = 'rgba(0,0,0, alp)';
+// const globalCompositeOperationLineOnCanvasD = 'source-over';
 
-const canvasColorL = 'rgba(255,255,255,alp)';
-const globalCompositeOperationLineOnCanvasL = 'source-over';
+const canvasColorL = 'rgba(255,255,255, alp)';
+// const globalCompositeOperationLineOnCanvasL = 'source-over';
+
+const globalCompositeOperationLineOnCanvas = 'source-over';
+let canvasColor = undefined;
 
 
 document.addEventListener( 'DOMContentLoaded', function(){
-    let canvasColor = canvasColorD;
-    let globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
+    if (window.matchMedia) {
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+            canvasColor = canvasColorD;
+        } else {
+            canvasColor = canvasColorL;
+        }
+    } else {
+        canvasColor = canvasColorD;
+    }
+    // let globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
 
     document.getElementById('light-mode').addEventListener('click', () => {
         if (canvasColor == canvasColorD) {
             canvasColor = canvasColorL;
-            globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasL;
+            // globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasL;
         } else {
             canvasColor = canvasColorD;
-            globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
+            // globalCompositeOperationLineOnCanvas = globalCompositeOperationLineOnCanvasD;
         }
     });
 

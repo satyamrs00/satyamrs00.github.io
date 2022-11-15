@@ -8,7 +8,7 @@
     src: url(/fonts/helvetica-w01-light.ttf);
     font-display: swap;
 }
-:root {
+body.dark-mode {
     --background:#000;
     --main-text:#F3EDE9;
     --head-text:#FFFFFF;
@@ -20,6 +20,20 @@
     --green-gradient:linear-gradient(to right bottom, #6E8464, #2B5135);
     --blue-black-gradient:linear-gradient(to left bottom, #434B66, #000);
     --cursor-mix-blend-mode:screen;
+}
+
+body.light-mode {
+    --background:#fff;
+    --main-text:#414247;
+    --head-text:#000;
+    --pink-gradient:linear-gradient(to right, #db6bd5, #A499C9);
+    --pink-color:#db6bd5;
+    --cursor-cover-color:#a499c9;
+    --image-shadow-color:#000000AA;
+    --blue-yellow-gradient:linear-gradient(to right bottom, #a3bccd, #cdc0a3);
+    --green-gradient:linear-gradient(to right bottom, #c5cfc0, #9ac9a7);
+    --blue-black-gradient:linear-gradient(to left bottom, #adb3c9, #fff);
+    --cursor-mix-blend-mode:darken;
 }
 
 @keyframes fadeUp {
